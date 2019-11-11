@@ -23,6 +23,7 @@ public class onCreate {
 		}
 		int log_inp;
 		boolean bol=true;
+		int c;
 		//login and register
 		System.out.println("Welcome to hungry\n1.Login 2.Register");
 		log_inp=st.nextInt();
@@ -33,10 +34,29 @@ public class onCreate {
 				System.out.println("Your Password");
 				String password=st.next();
 				login log_o=new login(username,password);
-				bol=log_o.check_login(file);
+				c=log_o.check_login(file);
+				if(c==0) {
+					bol=false;
+				}
+				else if(c==1) {
+					bol=true;
+				}
+				else if(c==-1) {
+					System.out.println("1.Login 2.Register");
+					int inp=st.nextInt();
+					if(inp==1) {
+						bol=true;
+					}
+					else if(inp==2) {
+						log_inp=2;
+						System.out.println("Please register first");
+						bol=false;
+					}
+				}
 			}
 		}
-		else if(log_inp==2) {
+		if(log_inp==2) {
+			bol=true;
 			while(bol) {
 				System.out.println("Username");
 				String username=st.next();

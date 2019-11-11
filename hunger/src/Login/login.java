@@ -14,8 +14,9 @@ public class login {
 		this.password=password;
 	}
 	
-	public boolean check_login(String file) throws IOException{
+	public int check_login(String file) throws IOException{
 		boolean b=true;
+		int c=-1;
 		Scanner sc=new Scanner(new File(file));
 		String s;
 		String compare[];
@@ -25,17 +26,17 @@ public class login {
 			if(username.equals(compare[0]) && password.equals(compare[1])) {
 				sc.close();
 				System.out.println("Login is successful");
-				return false;
+				return 0;
 			}
 			else if(username.equals(compare[0]) && !(password.equals(compare[1]))){
 				System.out.println("Password is wrong!!");
 				sc.close();
-				return true;
+				return 1;
 			}
 		}
 		sc.close();
-		System.out.println("User not found!!");
-		return b;
+		System.out.println("User not found!!");	
+		return c;
 	}
 
 	
