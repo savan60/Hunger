@@ -1,10 +1,12 @@
 package hunger;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
 import Login.Register;
+import Login.Register_shop;
 import Login.login;
 
 public class onCreate {
@@ -72,8 +74,16 @@ public class onCreate {
 				System.out.println("Address");
 				String extra=st.nextLine();
 				String address=st.nextLine();
-				Register register=new Register(username,password,address);
-				bol=register.check_regis(file);
+				if(user_type==1) {
+					System.out.println("Restaurent");
+					String rest=st.nextLine();
+					Register_shop regist=new Register_shop(username,password,rest,address);
+					bol=regist.check_regis(file);
+				}
+				else {
+					Register register=new Register(username,password,address);
+					bol=register.check_regis(file);
+				}
 			}
 		}
 	}
@@ -83,7 +93,7 @@ public class onCreate {
 		
 	}
 
-	public void cust_methods() {
+	public void cust_methods() throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		
 	}

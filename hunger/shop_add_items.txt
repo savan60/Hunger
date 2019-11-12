@@ -1,2 +1,3 @@
-savan[burger,60,veg:pizza,99,margerita:jainbhel,30,mitha:regularbhel,60,tikkhi:]
-savan2[panipuri,20,tikkhi:vadapav,20,spicy:]
+sagar[burger,60,veggy:panipuri,20,tikkhi:]
+jainam[vadapav,20,vadavado:dabeli,30,kucchi:]
+savan[bhel,23,kajk:]

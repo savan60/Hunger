@@ -51,7 +51,6 @@ public class Show_items extends shope_details {
 					System.out.print(" ");
 				}
 				System.out.print(temp5[2]+"\n");
-				
 			}
 			
 		}

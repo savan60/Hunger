@@ -10,6 +10,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		Scanner ste=new Scanner(System.in);
 		
+		
 //		FileWriter f2=new FileWriter("login_shop.txt");
 //		f2.write("savan 1234 radhika");
 //		f2.close();
@@ -30,11 +31,13 @@ public class Main {
 		}
 		onStart onstart=new onStart(prof_input,oncreate.Username);
 		System.out.println("Welcome "+oncreate.Username);
+		
+		
 //		onStart onstart=new onStart();
 		if(prof_input==1) {
 			onstart.shop_methods();
 		}
-		else if(prof_input==1) {
+		else if(prof_input==2) {
 			onstart.cust_methods();
 		}
 		boolean b=true;

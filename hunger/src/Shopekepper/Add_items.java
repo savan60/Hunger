@@ -100,6 +100,5 @@ public class Add_items extends shope_details {
 			f1.write(temp3);
 			f1.close();
 		}
-		st.close();
 	}
 }

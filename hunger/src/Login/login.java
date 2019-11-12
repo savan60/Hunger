@@ -1,6 +1,7 @@
 package Login;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -20,20 +21,27 @@ public class login {
 		Scanner sc=new Scanner(new File(file));
 		String s;
 		String compare[];
+		FileWriter f=new FileWriter(new File("current_user.txt"));
 		while(sc.hasNextLine()) {
 			s=sc.nextLine();
-			compare=s.split(" ");
+			compare=s.split(",");
 			if(username.equals(compare[0]) && password.equals(compare[1])) {
-				sc.close();
+				//sc.close();
 				System.out.println("Login is successful");
+				f.write(username);
+				f.close();
 				return 0;
 			}
 			else if(username.equals(compare[0]) && !(password.equals(compare[1]))){
 				System.out.println("Password is wrong!!");
-				sc.close();
+				//sc.close();
+				f.write(username);
+				f.close();
 				return 1;
 			}
 		}
+		f.write(username);
+		f.close();
 		System.out.println("User not found!!");	
 		return c;
 	}
