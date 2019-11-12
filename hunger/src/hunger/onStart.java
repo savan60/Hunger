@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import Shopekepper.Add_items;
+import Shopekepper.Show_items;
 import Shopekepper.shope_details;
 
 public class onStart extends onCreate {
@@ -14,8 +15,6 @@ public class onStart extends onCreate {
 		super(user_type);
 		Username=username;
 	}
-
-	
 	
 	public void shop_methods() throws IOException {
 		Scanner sc=new Scanner(System.in);
@@ -26,10 +25,16 @@ public class onStart extends onCreate {
 		System.out.println("1.Add items 2.show all items 3.see orders 4.exit");
 		int a=sc.nextInt();
 		switch(a) {
-		case 1:
-			sd = new Add_items(Username);
-			sd.add_items();
-		}
+			case 1:
+				sd = new Add_items(Username);
+				sd.add_items();
+				break;
+			case 2:
+				sd=new Show_items(Username);
+				sd.show_items();
+				break;
+			}
+			
 		}
 	}
 	

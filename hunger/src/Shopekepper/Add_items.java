@@ -80,11 +80,9 @@ public class Add_items extends shope_details {
 			s=temp4+s;
 			s=s+"]\n";
 			f1.write(s);
-			System.out.println("here 2");
 			f1.close();
 		}
 		else {
-			System.out.println("here 3");
 
 			temp2=temp3.split("\n");		//temp2 is array of string of lines present in file
 			
