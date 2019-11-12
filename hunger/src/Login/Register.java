@@ -36,14 +36,13 @@ public class Register {
 			FileWriter f=new FileWriter(new File(file),true);
 			f.write("\n"+username+" "+password+" "+address);
 			f.close();
-			sc.close();
+		
 			System.out.println("Registered Succesfully!!");
 			return false;
 			
 		}
 		else {
 			System.out.println("Username already exist..");
-			sc.close();
 			return true;
 		}
 		

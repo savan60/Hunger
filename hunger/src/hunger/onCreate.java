@@ -8,8 +8,15 @@ import Login.Register;
 import Login.login;
 
 public class onCreate {
+	
+	int user_type;
+	String Username;
+	
+	onCreate(int user_type){
+		this.user_type=user_type;
+	}
 
-	public void logup(int user_type) throws IOException {
+	public void logup() throws IOException {
 		Scanner st=new Scanner(System.in);
 //		File file = null;
 		String file="";
@@ -30,10 +37,10 @@ public class onCreate {
 		if(log_inp==1) {
 			while(bol) {
 				System.out.println("Your Username");
-				String username=st.next();
+				Username=st.next();
 				System.out.println("Your Password");
 				String password=st.next();
-				login log_o=new login(username,password);
+				login log_o=new login(Username,password);
 				c=log_o.check_login(file);
 				if(c==0) {
 					bol=false;
@@ -69,8 +76,16 @@ public class onCreate {
 				bol=register.check_regis(file);
 			}
 		}
+	}
+
+	public void shop_methods() throws IOException {
+		// TODO Auto-generated method stub
 		
-		st.close();
+	}
+
+	public void cust_methods() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

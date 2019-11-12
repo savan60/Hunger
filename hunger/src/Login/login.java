@@ -34,11 +34,7 @@ public class login {
 				return 1;
 			}
 		}
-		sc.close();
 		System.out.println("User not found!!");	
 		return c;
 	}
-
-	
-	
 }
