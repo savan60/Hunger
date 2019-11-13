@@ -9,7 +9,7 @@ public class customer {
 		
 	}
 
-	public void yourorder_items() {
+	public void yourorder_items() throws FileNotFoundException {
 		
 	}
 

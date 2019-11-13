@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Order_items extends customer{
 	
-	
+	 
 	public void order_items() {
 		Scanner sc=new Scanner(System.in);
 		customer cd;
