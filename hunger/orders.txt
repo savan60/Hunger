@@ -1,3 +1,4 @@
-jainam,savan,[vadapav;3;60],[vadapav;1;20]
-savan,savan,[bhel;5;115]
-sagar,savan,[burger;5;300],[panipuri;3;60]
+jainam,savan,[dabeli;4;120]
+jainam,savan,[vadapav;6;120]
+savan,savan,[bhel;2;46]
+sagar,savan,[burger;2;120]

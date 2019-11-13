@@ -37,10 +37,10 @@ public class Place_order {
 			d=d+1;
 			System.out.println("temp2[0] is"+temp2[0]+" temp2[1] is "+temp2[1]);
 			System.out.println("username is "+username+" current user is "+current_user);
-			if(username.equals(temp2[0]) && current_user.equals(temp2[1])) {
-				present=present*0;
-				f=d;						//f is position of line where we found user
-			}
+//			if(username.equals(temp2[0]) && current_user.equals(temp2[1])) {
+//				present=present*0;
+//				f=d;						//f is position of line where we found user
+//			}
 		}
 		s="["+item+";"+quan+";"+price+"]";
 		
@@ -52,22 +52,22 @@ public class Place_order {
 			f2.write(s);
 			f2.close();
 		}
-		else {
-			temp2=temp3.split("\n");
-			temp=temp2[f-1];
-			e=temp.indexOf(']');			//index after which items will be added
-			temp5=temp.substring(0,e+1);
-			FileWriter f3=new FileWriter(new File("orders.txt"));
-			s=temp5+","+s;
-			temp2[f-1]=s;
-			temp3="";
-			for( String i : temp2){
-				temp3=temp3+i+"\n";			//combining all the lines to one string
-			}
-			f3.write(temp3);
-			f3.close();
-			
-		}
+//		else {
+//			temp2=temp3.split("\n");
+//			temp=temp2[f-1];
+//			e=temp.indexOf(']');			//index after which items will be added
+//			temp5=temp.substring(0,e+1);
+//			FileWriter f3=new FileWriter(new File("orders.txt"));
+//			s=temp5+","+s;
+//			temp2[f-1]=s;
+//			temp3="";
+//			for( String i : temp2){
+//				temp3=temp3+i+"\n";			//combining all the lines to one string
+//			}
+//			f3.write(temp3);
+//			f3.close();
+//			
+//		}
 		
 	}
 
