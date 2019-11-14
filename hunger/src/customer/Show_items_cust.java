@@ -20,7 +20,7 @@ public class Show_items_cust  {
 		String items[]=new String[10];
 		String price[]=new String[10];
 		String users[]=new String[10];
-		System.out.println("          items        price       details");
+		System.out.println("                         items                    price                    details");
 		while(k!=(username.length)) {
 			int present=1,d=0,f=1,start,end;
 			Scanner st=new Scanner(new File("shop_add_items.txt"));//scanning the file
@@ -47,10 +47,10 @@ public class Show_items_cust  {
 			
 			for(String i : temp2) {
 				temp5=i.split("\\,");
-				f=10-temp5[0].length();
-				d=10-temp5[1].length();
-				System.out.print(l+"          "+temp5[0]);
-				for(int j=0;j<d;j++) {
+				f=25-temp5[0].length();
+				d=25-temp5[1].length();
+				System.out.print(l+"                         "+temp5[0]);
+				for(int j=0;j<f;j++) {
 					System.out.print(" ");
 				}
 				System.out.print(temp5[1]);

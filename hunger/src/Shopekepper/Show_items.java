@@ -6,17 +6,23 @@ import java.util.Scanner;
 
 public class Show_items extends shope_details {
 	
-	String username;
 	
-	public Show_items(String username) {
-		this.username=username;
+	public Show_items() {
 	}
 	
-	
 	public void show_items() throws FileNotFoundException {
+		
 		Scanner st=new Scanner(new File("shop_add_items.txt"));//scanning the file
+		
 		String temp,temp3="",temp2[],temp4,temp5[];
+		
 		int present=1,d=0,f=1,start,end;
+		
+		String username;
+		
+		Scanner su=new Scanner(new File("current_user.txt"));//scanning cureent user from the file
+		username=su.nextLine();
+		
 		//Reading line one by one and checking for the usename
 		while(st.hasNextLine()) {
 			temp=st.nextLine();
@@ -37,13 +43,13 @@ public class Show_items extends shope_details {
 			temp4=temp.substring(start+1,end);
 			System.out.println("temp4 is "+temp4);
 			temp2=temp4.split("\\:");
-			System.out.println("          items        price       details");
+			System.out.println("                         items                    price                    details");
 			for(String i : temp2) {
 				temp5=i.split("\\,");
-				f=10-temp5[0].length();
-				d=10-temp5[1].length();
-				System.out.print("          "+temp5[0]);
-				for(int j=0;j<d;j++) {
+				f=25-temp5[0].length();//to have equal spacing, we leave 25 spaces
+				d=25-temp5[1].length();
+				System.out.print("                         "+temp5[0]);
+				for(int j=0;j<f;j++) {
 					System.out.print(" ");
 				}
 				System.out.print(temp5[1]);

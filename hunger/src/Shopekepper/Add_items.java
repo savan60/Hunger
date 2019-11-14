@@ -7,13 +7,10 @@ import java.util.Scanner;
 
 public class Add_items extends shope_details {
 	
-	String username;
-	
-	public Add_items(String username){
-		this.username=username;
+	public Add_items(){
+		
 	}
 	
-
 	public void add_items() throws IOException {
 		/*In these method we will be adding items in the file shop_add_items.txt,
 		 * the detials will be added in format "username[item1,price1,detai1:item2,price2,detail2:]"
@@ -29,7 +26,10 @@ public class Add_items extends shope_details {
 		String item;						//name of item
 		String price;						//price of item
 		String detail;						//detail of item
+		String username;
 		
+		Scanner su=new Scanner(new File("current_user.txt"));
+		username=su.nextLine();
 		boolean b = true;
 		int present=1,d=0,e,f=1;			//is element present in file?
 		

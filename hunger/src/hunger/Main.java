@@ -8,16 +8,13 @@ import Login.*;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
+		/*Hello, Welcome to Hunger!
+		 * In these Main class,we just take input for type of user,
+		 * and go to onCreate for login/signup
+		 * then we call onStart
+		 */
 		Scanner ste=new Scanner(System.in);
 		
-		
-//		FileWriter f2=new FileWriter("login_shop.txt");
-//		f2.write("savan 1234 radhika");
-//		f2.close();
-//		
-//		FileWriter f=new FileWriter("login_cus.txt");
-//		f.write("savan 1234 radhika residency");
-//		f.close();
 		System.out.println("Who are you??\n1.Shopkepper2.Coustomer");
 		int prof_input=ste.nextInt();
 		
@@ -26,42 +23,24 @@ public class Main {
 		try {
 			oncreate.logup();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		onStart onstart=new onStart(prof_input,oncreate.Username);
-		System.out.println("Welcome "+oncreate.Username);
 		
+		//All the types of features of Hunger is present in onStart,which is called after onCreate
+		onStart onstart=new onStart(prof_input);
 		
-//		onStart onstart=new onStart();
+		String username;
+		Scanner su=new Scanner(new File("current_user.txt"));
+		username=su.nextLine();
+		System.out.println("Welcome "+username);
+		
 		if(prof_input==1) {
-			onstart.shop_methods();
+			onstart.shop_methods();//shopkepper's feature
 		}
 		else if(prof_input==2) {
-			onstart.cust_methods();
+			onstart.cust_methods();//customer's feature
 		}
-		boolean b=true;
-		String name="";
-		String shopno="";
-		String[] stri=new String[5];
-		while(b) {
-		System.out.println("name");
-		//name=ste.nextLine();
-		System.out.println("shopno");
-		//shopno=ste.nextLine();
-		for(int i=0;i<5;i++) {
-			System.out.println("item"+i);
-			//stri[i]=ste.next();
-			//strings=strings+" "+stri[i];
-		}
-		b=false;
-		}
-		//shope_details shope=new shope_details(name,shopno,stri);
 		
-		
-//		FileWriter fw=new FileWriter("sagar.txt");
-//		fw.write(shope.name+" "+shope.shop_no+strings);
-//		fw.close();
 	}
 
 }

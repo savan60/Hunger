@@ -1,42 +1,59 @@
 package hunger;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
 import Shopekepper.Add_items;
 import Shopekepper.Show_items;
+import Shopekepper.View_Orders;
 import Shopekepper.shope_details;
 import customer.Order_items;
 import customer.YourOrder_items;
 import customer.customer;
 
-public class onStart extends onCreate {
+public class onStart {
 	
-	String Username;
+	int user_type;
 
-	onStart(int user_type,String username) {
-		super(user_type);
-		Username=username;
+	public onStart(int user_type) {
+		this.user_type=user_type;
 	}
 	
+	
+
 	public void shop_methods() throws IOException {
 		Scanner sc=new Scanner(System.in);
+		
+		
+		
 		shope_details sd;
 		boolean b = true;
 		while(b) {
 		//System.out.println(Username);
-		System.out.println("1.Add items 2.show all items 3.see orders 4.exit");
+		System.out.println("1.Add items 2.show all items 3.View orders 4.logout");
 		int a=sc.nextInt();
 		switch(a) {
 			case 1:
-				sd = new Add_items(Username);
+				sd = new Add_items();
 				sd.add_items();
 				break;
 			case 2:
-				sd=new Show_items(Username);
+				sd=new Show_items();
 				sd.show_items();
 				break;
+			case 3:
+				sd=new View_Orders();
+				sd.view_orders();
+				break;
+			case 4:
+				onCreate oncreate=new onCreate(user_type);
+				try {
+					oncreate.logup();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 			
 		}
@@ -50,7 +67,7 @@ public class onStart extends onCreate {
 			try {
 				{
 				//System.out.println(Username);
-				System.out.println("1.Are you hungry? 2.Your Orders 3.Confirmed Orders 4.exit");
+				System.out.println("1.Are you hungry? 2.Your Orders  3.logout");
 				int a=sc.nextInt();
 				switch(a) {
 					case 1:
@@ -61,8 +78,14 @@ public class onStart extends onCreate {
 						cd=new YourOrder_items();
 						cd.yourorder_items();
 						break;
+					case 3:
+						onCreate oncreate=new onCreate(user_type);
+						try {
+							oncreate.logup();
+						} catch (IOException e) {
+							e.printStackTrace();
+						}	
 					}
-					
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

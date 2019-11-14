@@ -19,4 +19,10 @@ public class shope_details  {
 			
 		}
 
+		public void view_orders() throws FileNotFoundException {
+			// TODO Auto-generated method stub
+			
+		}
+
+		
 }
