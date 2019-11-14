@@ -22,11 +22,8 @@ public class Food_items {
 		}
 		temp4=temp3.split("\\,");
 		Show_items_cust select_all;
-		System.out.println("temp4 is"+temp4[0]+temp4[1]+temp4[2]);
 		select_all=new Show_items_cust(temp4);
 		select_all.show_items();
-		j++;
-		
-		
+		j++;	
 	}
 }

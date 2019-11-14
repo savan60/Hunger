@@ -42,7 +42,6 @@ public class Add_items extends shope_details {
 		//Reading line one by one and checking for the usename
 		while(st.hasNextLine()) {
 			temp=st.nextLine();
-			System.out.println(temp);
 			temp3=temp3+temp+"\n";			//storing details of whole file in temp3
 			temp2=temp.split("\\[");		//splitting to take username from line
 			d=d+1;

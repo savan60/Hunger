@@ -30,7 +30,32 @@ public class YourOrder_items extends customer{
 				f[k++]=d-1;
 			}
 		}
+		
+		System.out.print("sr.no.");
+		for(int j1=0;j1<14;j1++) {
+			System.out.print(" ");
+		}
+		System.out.print("Items");
+		for(int j1=0;j1<17;j1++) {
+			System.out.print(" ");
+		}
+		System.out.print("Quantity");
+		for(int j1=0;j1<20;j1++) {
+			System.out.print(" ");
+		}
+		System.out.print("Price");
+		for(int j1=0;j1<15;j1++) {
+			System.out.print(" ");
+		}
+		System.out.print("Restaurent");
+		for(int j1=0;j1<18;j1++) {
+			System.out.print(" ");
+		}
+		System.out.print("Address\n\n");
+		
+		
 		if(present==0) {
+			int count=1;
 			temp2=temp3.split("\n");
 
 			for(int j=0;j<(k);j++) {
@@ -48,7 +73,33 @@ public class YourOrder_items extends customer{
 				}	
 				temp3=temp5[2].substring(1,temp5[2].length()-1);
 				temp6=temp3.split("\\;");
-				System.out.println(temp6[0]+"   "+temp6[1]+"   "+temp6[2]+"   "+rest+"   "+adress);
+				int space1=25-temp6[0].length();
+				int space2=25-temp6[1].length();
+				int space3=25-temp6[2].length();
+				int space4=25-rest.length();
+				int space5=25-adress.length();
+				System.out.print(count++);
+				for(int j1=0;j1<space1;j1++) {
+					System.out.print(" ");
+				}
+				System.out.print(temp6[0]);
+				for(int j1=0;j1<space2;j1++) {
+					System.out.print(" ");
+				}
+				System.out.print(temp6[1]);
+				for(int j1=0;j1<space3;j1++) {
+					System.out.print(" ");
+				}
+				System.out.print(temp6[2]);
+				for(int j1=0;j1<space4;j1++) {
+					System.out.print(" ");
+				}
+				System.out.print(rest);
+				for(int j1=0;j1<space5;j1++) {
+					System.out.print(" ");
+				}
+				System.out.println(adress);
+				
 			}
 		}
 		

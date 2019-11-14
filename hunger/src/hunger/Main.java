@@ -39,8 +39,6 @@ public class Main {
 		}
 		else if(prof_input==2) {
 			onstart.cust_methods();//customer's feature
-		}
-		
+		}	
 	}
-
 }

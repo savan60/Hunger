@@ -20,7 +20,7 @@ public class Show_items_cust  {
 		String items[]=new String[10];
 		String price[]=new String[10];
 		String users[]=new String[10];
-		System.out.println("                         items                    price                    details");
+		System.out.println("sr.no.                     items                    price                    details\n");
 		while(k!=(username.length)) {
 			int present=1,d=0,f=1,start,end;
 			Scanner st=new Scanner(new File("shop_add_items.txt"));//scanning the file
@@ -38,11 +38,9 @@ public class Show_items_cust  {
 		if(present==0) {
 			temp2=temp3.split("\n");
 			temp=temp2[f-1];
-			//System.out.println("temp is "+temp);
 			start=temp.indexOf("[");
 			end=temp.indexOf("]");
 			temp4=temp.substring(start+1,end);
-			//System.out.println("temp4 is "+temp4);
 			temp2=temp4.split("\\:");
 			
 			for(String i : temp2) {
@@ -82,7 +80,7 @@ public class Show_items_cust  {
 					System.out.println("Quantity");
 					int quan=sc.nextInt();
 					int prize=quan*Integer.parseInt(price[inp-1]);
-					System.out.println("Toatal price is"+quan+"*"+price[inp-1]+"="+prize);
+					System.out.println("Toatal price is "+quan+"*"+price[inp-1]+"="+prize);
 					System.out.println("1.Confirm 2.cancel");
 					int inpu=sc.nextInt();
 					if(inpu==1) {

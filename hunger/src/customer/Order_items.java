@@ -13,7 +13,7 @@ public class Order_items extends customer{
 		boolean b = true;
 		while(b) {
 		//System.out.println(Username);
-		System.out.println("1.Restaurant 2.food_items");
+		System.out.println("1.Restaurant 2.food_items 3.exit");
 		int a=sc.nextInt();
 		switch(a) {
 			case 1:
@@ -33,6 +33,9 @@ public class Order_items extends customer{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+				break;
+			case 3:
+				b=false;
 				break;
 			}
 			

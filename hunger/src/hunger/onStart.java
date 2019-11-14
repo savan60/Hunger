@@ -21,12 +21,15 @@ public class onStart {
 		this.user_type=user_type;
 	}
 	
-	
-
 	public void shop_methods() throws IOException {
+		/*
+		 * All the features for shopekepper
+		 * ->object of shope_details is made		
+		 * 		1)All the other class(in package Shopekepper) are child of shope_details.
+		 * 		2)according to input given by user,object is assigned.
+		 */
+		
 		Scanner sc=new Scanner(System.in);
-		
-		
 		
 		shope_details sd;
 		boolean b = true;
@@ -60,10 +63,16 @@ public class onStart {
 	}
 	
 	public void cust_methods() throws FileNotFoundException {
+		/*
+		 * All the features for Customer
+		 * ->object of customer is made		
+		 * 		1)All the other class(in package Customer) are child of customer.
+		 * 		2)according to input given by user,object is assigned.
+		 */
 		Scanner sc=new Scanner(System.in);
 		customer cd;
 		boolean b = true;
-		while(b)
+		while(b) {
 			try {
 				{
 				//System.out.println(Username);
@@ -91,6 +100,6 @@ public class onStart {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+		}
 	}
 }
